@@ -56,33 +56,67 @@ public class GameDriver{
                       + "saw different clues and strange things happening, but his friends couldn't see. As the sun became the moon, they packed up and \n"
                       + "went home enjoying there first day of break. Once Adam parked the car on the driveway, he started to unpack the car, but he sense \n"
                       + "someone was behind him and turned around and got knocked out. As Adam closely open his eyes, he was shocked of where he was. As the \n"
-                      + "operator saw Adam waking up, he began to talk into the microphone.");
+                      + "operator saw Adam waking up.");
     // Start of Game Time
-    System.out.println("It has seem that you have finally woken up. Welcome SIR!");
-
+    System.out.println("Mysteriously music started to play and the speaker begins to speak.");
+    System.out.println("It has seem that you have finally woken up.");
+    
+    // Declaring variables
+    int question;
+    int name;
+    int idea;
+                       
     // Questuon #1
     System.out.println("Do you remember anything that happened to you sir? "
                        + "Push 1 for Yes, Push 2 for No."); // Yes or No answers only
-    // Declaring variable and prompt user to enter 1 or 2
-    int question = input.nextInt();
+    // Prompt user to enter 1 or 2
+    question = input.nextInt();
     if(question >= 2){
       System.out.println("No");
     }
     else{
       System.out.println("Yes");
-    }    
-    
+    }     
     // Question #2 
     System.out.println("What about your name?"); 
-    int name = input.nextInt();
+    name = input.nextInt();
     if (name >= 2){
       System.out.println("No");
     }
     else{
       System.out.println("Yes");
     }
-
+    // Question #3
+    System.out.println("Do you have an idea why you are here?");
+    idea = input.nextInt();
+    if (name >= 2){
+      System.out.println("No");
+    }
+    else{
+      System.out.println("Yes");
+    }
+    
+    // Let the game begin!
+    System.out.println("There are 5 doors in this room, choose the right one to process!");
+    
+    // Generate number between 1 to 5
+    int randomNum = (int)((Math.random() * 5) + 1);
+    System.out.println((int)((Math.random() * 5) + 1));
+    
+    if(randomNum == 5){
+      System.out.println("You have choosen the right door. Please move ahead.");
+    }
+    else if(randomNum == 4){
+      System.out.println("Are you sure you want this door? This might lead to your death.");
+    }
+    else if(randomNum == 3){
+      System.out.println("You found a key for another room.");
+    }
+    else if(randomNum == 2){
+      System.out.println("You found a chest full of loot.");
+    }
+    else{
+      System.out.println("Please try again.");
+    }
   }
- 
-
 }
