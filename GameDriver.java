@@ -116,7 +116,10 @@ public class GameDriver{
       System.out.println("You found a chest full of loot.");
     }
     else{
-      System.out.println("Please try again.");
+      System.out.println("Game Over.");
     }
+    
+    // Game Over
+    System.out.println("Game Over.");
   }
 }
