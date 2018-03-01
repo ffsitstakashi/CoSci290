@@ -48,18 +48,21 @@ public class GameDriver{
                       + "Calm down calm down, just because you're going on a break doesn't mean you can't work. You all will have to do \n"
                       + "a report on what you did for break. As the bell began to rang, Adam grabbed his stuff and ran out as fast as \n"
                       + "possible to meet up with friends to talk about what the plan is for the break. As that time came for everyone to leave \n"
-                      + "campus, Adam went home to get rest. The next day, Adam and his friends all met up at Bill's house before heading out \n"
+                      + "campus, Adam went home to get some rest. The next day, Adam and his friends all met up at Bill's house before heading out \n"
                       + "together. As friends began coming slowly, they started to move the stuff into the car to make the leaving phrase easier. \n"
                       + "Once all the friends came, they went to the destination, which was the beach for today. Everyone was waiting for this day to \n"
                       + "come since they all needed a break from school. Upon arriving to the beach, they set up boot camp and began there adventure \n"
-                      + "at the beach. But little did Adam and his friends know, something went terribly wrong throughout the day. Adam and only him \n"
-                      + "saw different clues and strange things happening, but his friends couldn't see. As the sun became the moon, they packed up and \n"
+                      + "at the beach. But little did Adam and his friends know, something went terribly wrong throughout the day. Adam was the only one who \n"
+                      + "saw different clues and strange things happening, but his friends didn't notice anything. As the sun slowly moved down, they packed up and \n"
                       + "went home enjoying there first day of break. Once Adam parked the car on the driveway, he started to unpack the car, but he sense \n"
                       + "someone was behind him and turned around and got knocked out. As Adam closely open his eyes, he was shocked of where he was. As the \n"
                       + "operator saw Adam waking up.");
     // Start of Game Time
+    System.out.println("");
     System.out.println("Mysteriously music started to play and the speaker begins to speak.");
-    System.out.println("It has seem that you have finally woken up.");
+    System.out.println("It has seem that you have finally woken up. You are totally safe and sound here, but we have a little game for you to enjoy first. \n"
+                      + "Please enjoy your stand and find clues to escape the hotel. First of all, here are some questions I would like to ask you before \n"
+                      + "you start.");
     
     // Declaring variables
     int question;
@@ -67,7 +70,7 @@ public class GameDriver{
     int idea;
                        
     // Questuon #1
-    System.out.println("Do you remember anything that happened to you sir? "
+    System.out.println("Do you remember anything that happened to you? "
                        + "Push 1 for Yes, Push 2 for No."); // Yes or No answers only
     // Prompt user to enter 1 or 2
     question = input.nextInt();
@@ -95,6 +98,9 @@ public class GameDriver{
     else{
       System.out.println("Yes");
     }
+    
+    System.out.println("");
+    System.out.println("Well, let's begin by trying to figure out a way to exit this room.");
     
     // Let the game begin!
     System.out.println("There are 5 doors in this room, choose the right one to process!");
