@@ -26,15 +26,10 @@ public class Lab8{
     
     // Declare variable
     int sum = 0;
-    
-    // A loop to scan over the user number 
-    while (n > 0){
-      
-      // To extract the user number 
-      sum += n % 10;
-      
-      // To remove the extracted user number
-      n /= 10;
+  
+    while (n > 0){ // A loop to scan over the user number  
+      sum += n % 10; // To extract the user number
+      n /= 10; // To remove the extracted user number
     }
     // Return and display the sum 
     return sum;
