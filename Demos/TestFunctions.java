@@ -45,8 +45,8 @@ public class TestFunctions{
     
     // test printHello()
     printHello("Thomas");
+  }
   
- }
   //this funstion finds the sum of two numbers 
   public static int findSum(int num1, int num2){
     int sum = num1 + num2; 
