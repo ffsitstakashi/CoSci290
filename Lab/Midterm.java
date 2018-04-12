@@ -50,8 +50,8 @@ public class Midterm{
  
     for ( c = 0 ; c < n ; c++ )
       for ( d = 0 ; d < j ; d++ )
-        sum[c][d] = first[c][d] * second[c][d];  // the addition matrix
-        sum [c][d] = first[c][d] * second[c][d]; // the multiplication matrix
+        sum[c][d] = first[c][d] + second[c][d];  // the addition matrix
+        //sum [c][d] = first[c][d] * second[c][d]; // the multiplication matrix
     
     // Display the results
     System.out.println("Sum of entered matrices:-");
