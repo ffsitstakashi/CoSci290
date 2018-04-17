@@ -30,45 +30,43 @@ REMEMBER:
 */
 
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class GameDriver{
   
   // Start of application
   public static void main(String[] args){
     // Create Scanner
     Scanner input = new Scanner(System.in);
+    Utility tool = new Utility();
     
     // Display splash screen
-    System.out.println("    ___________                                 ._.   \n " 
-                      +  "   \\_   _____/ ______ ____ _____  ______   ____| |   \n " 
-                      +  "    |    __)_ /  ___// ___\\\\__  \\ \\____ \\_/ __ \\ |   \n " 
-                      +  "    |        \\\\___ \\\\  \\___ / __ \\|  |_> >  ___/\\|   \n " 
-                      +  "   /_______  /____  >\\___  >____  /   __/ \\___  >_   \n " 
-                      +  "           \\/     \\/     \\/     \\/|__|        \\/\\/ ");
-    System.out.println("Ok class this is our last day together before spring break, Professor Vu said as we all cheered with happiness. \n"
-                      + "Calm down calm down, just because you're going on a break doesn't mean you can't work. You all will have to do \n"
-                      + "a report on what you did for break. As the bell began to rang, Adam grabbed his stuff and ran out as fast as \n"
-                      + "possible to meet up with friends to talk about what the plan is for the break. As that time came for everyone to leave \n"
-                      + "campus, Adam went home to get some rest. The next day, Adam and his friends all met up at Bill's house before heading out \n"
-                      + "together. As friends began coming slowly, they started to move the stuff into the car to make the leaving phrase easier. \n"
-                      + "Once all the friends came, they went to the destination, which was the beach for today. Everyone was waiting for this day to \n"
-                      + "come since they all needed a break from school. Upon arriving to the beach, they set up boot camp and began there adventure \n"
-                      + "at the beach. But little did Adam and his friends know, something went terribly wrong throughout the day. Adam was the only one who \n"
-                      + "saw different clues and strange things happening, but his friends didn't notice anything. As the sun slowly moved down, they packed up and \n"
-                      + "went home enjoying there first day of break. Once Adam parked the car on the driveway, he started to unpack the car, but he sense \n"
-                      + "someone was behind him and turned around and got knocked out. As Adam closely open his eyes, he was shocked of where he was. As the \n"
-                      + "operator saw Adam waking up.");
+    tool.readFile("SplashScreen.txt");
+    // Story setup
+    tool.readFile("Story.txt");
     // Start of Game Time
-    System.out.println("");
-    System.out.println("Mysteriously music started to play and the speaker begins to speak.");
-    System.out.println("It has seem that you have finally woken up. You are totally safe and sound here, but we have a little game for you to enjoy first. \n"
-                      + "Please enjoy your stand and find clues to escape the hotel. First of all, here are some questions I would like to ask you before \n"
+    System.out.println("Please enjoy your stand and find clues to escape the hotel. First of all, here are some questions I would like to ask you before \n"
                       + "you start.");
     
     // Declaring variables
-    int question;
-    int name;
-    int idea;
-                       
+    String question1 = "", question2 = "", question3 = "", question4 = "";
+    
+    tool.readFile("QuestionOne.txt");
+    System.out.println(question1);
+    question1 = input.next();
+    
+    tool.readFile("QuestionTwo.txt");
+    question2 = input.next();
+    
+    //tool.readFile("QuestionThree.txt");
+    //question3 = input.next();
+    
+    //tool.readFile("QuestionFour.txt");
+    //question4 = input.next();
+    
+    /*
     // Questuon #1
     System.out.println("Do you remember anything that happened to you? "
                        + "Push 1 for Yes, Push 2 for No."); // Yes or No answers only
@@ -98,6 +96,7 @@ public class GameDriver{
     else{
       System.out.println("Yes");
     }
+    */
     
     System.out.println("");
     System.out.println("Well, let's begin by trying to figure out a way to exit this room.");
@@ -126,6 +125,6 @@ public class GameDriver{
     }
     
     // Game Over
-    System.out.println("Game Over.");
+    tool.readFile("GameOver.txt");
   }
 }
