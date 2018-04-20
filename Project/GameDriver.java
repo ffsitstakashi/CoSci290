@@ -45,27 +45,57 @@ public class GameDriver{
     // Display splash screen
     tool.readFile("SplashScreen.txt");
     // Story setup
+    // Start of Game
     tool.readFile("Story.txt");
-    // Start of Game Time
-    System.out.println("Please enjoy your stand and find clues to escape the hotel. First of all, here are some questions I would like to ask you before \n"
-                      + "you start.");
+    System.out.println("1. Talk to the other person \n"
+                       + "2. Keep Calm");
+    
+    // First Decision
+    // Declaring variables and prompting user to choose an option
+    int puzzle;
+    puzzle = input.nextInt();
+    int puzzlee = puzzle;
+    String puzzle1;
+    switch(puzzlee){
+      case 1: puzzle1 = "Talk to the other person";
+        break;
+      default: puzzle1 = "Keep Calm";
+        break;
+      }
+    System.out.print(puzzle1);
+    System.out.println("");
+    System.out.println("");
+    
+    // Second Decision
+    tool.readFile("Story2.txt");
+    System.out.println("1. Go Right \n"
+                      + "2. Go Left");
+      
+    int userInput = input.nextInt();
+    if (userInput == 1){
+      System.out.println("Go Right");
+      System.out.println("");
+      tool.readFile("Story3.txt");
+    }
+    
+    if (userInput == 2){
+      System.out.println("Go Left");
+      System.out.println("");
+      tool.readFile("Story3.5.txt");
+    }
+    
+    
+    
+    /*
     
     // Declaring variables
     String question1 = "", question2 = "", question3 = "", question4 = "";
     
-    tool.readFile("QuestionOne.txt");
-    System.out.println(question1);
+    System.out.println("What is your name?");
     question1 = input.next();
     
-    tool.readFile("QuestionTwo.txt");
+    System.out.println(question1 + ". Do you have any idea why you are here today?");
     question2 = input.next();
-    
-    //tool.readFile("QuestionThree.txt");
-    //question3 = input.next();
-    
-    //tool.readFile("QuestionFour.txt");
-    //question4 = input.next();
-    
     /*
     // Questuon #1
     System.out.println("Do you remember anything that happened to you? "
