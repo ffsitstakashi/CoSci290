@@ -68,8 +68,10 @@ public class GameDriver{
     
     // Second Decision
     tool.readFile("Story2.txt");
+    System.out.println("");
     System.out.println("1. Go Right \n"
                       + "2. Go Left");
+    
       
     int userInput = input.nextInt();
     if (userInput == 1){
