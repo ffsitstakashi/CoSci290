@@ -33,6 +33,8 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class GameDriver{
   
@@ -47,96 +49,56 @@ public class GameDriver{
     // Story setup
     // Start of Game
     tool.readFile("Story.txt");
-    System.out.println("1. Talk to the other person \n"
-                       + "2. Keep Calm");
+    System.out.println("");
+    tool.readFile("Story2.txt");
+    System.out.println("");
+    tool.readFile("Story3.txt");
     
     // First Decision
     // Declaring variables and prompting user to choose an option
+    System.out.println("1. Yes, crash the box! \n"
+                       + "2. No, try searching the shelf");
     int puzzle;
     puzzle = input.nextInt();
     int puzzlee = puzzle;
     String puzzle1;
     switch(puzzlee){
-      case 1: puzzle1 = "Talk to the other person";
+      case 1: puzzle1 = "Yes, crash the box! You found the lost door handle";
         break;
-      default: puzzle1 = "Keep Calm";
+      default: puzzle1 = "No, try searching the shelf! You only found some dust, it must be in the box";
         break;
       }
     System.out.print(puzzle1);
     System.out.println("");
     System.out.println("");
-    
-    // Second Decision
-    tool.readFile("Story2.txt");
-    System.out.println("");
-    System.out.println("1. Go Right \n"
-                      + "2. Go Left");
-    
       
-    int userInput = input.nextInt();
-    if (userInput == 1){
-      System.out.println("Go Right");
-      System.out.println("");
-      tool.readFile("Story3.txt");
-    }
-    
-    if (userInput == 2){
-      System.out.println("Go Left");
-      System.out.println("");
-      tool.readFile("Story3.5.txt");
-    }
+    String CONTENT = "testWriting";
+    tool.writeFile("testWriting.txt", CONTENT);
     
     
+    tool.readFile("Story4.txt");
+    System.out.println("");
     
-    /*
-    
-    // Declaring variables
-    String question1 = "", question2 = "", question3 = "", question4 = "";
-    
-    System.out.println("What is your name?");
-    question1 = input.next();
-    
-    System.out.println(question1 + ". Do you have any idea why you are here today?");
-    question2 = input.next();
-    /*
-    // Questuon #1
-    System.out.println("Do you remember anything that happened to you? "
-                       + "Push 1 for Yes, Push 2 for No."); // Yes or No answers only
-    // Prompt user to enter 1 or 2
-    question = input.nextInt();
-    if(question >= 2){
-      System.out.println("No");
-    }
-    else{
-      System.out.println("Yes");
-    }     
-    // Question #2 
-    System.out.println("What about your name?"); 
-    name = input.nextInt();
-    if (name >= 2){
-      System.out.println("No");
-    }
-    else{
-      System.out.println("Yes");
-    }
-    // Question #3
-    System.out.println("Do you have an idea why you are here?");
-    idea = input.nextInt();
-    if (name >= 2){
-      System.out.println("No");
-    }
-    else{
-      System.out.println("Yes");
-    }
-    */
+    System.out.println("Now choose 1 of theses 4 doors!");
+      int choice = input.nextInt();
+      if(choice == 4){
+        System.out.println("You have choosen the right door. Please move ahead.");
+      }
+      else if (choice == 3){
+        System.out.println("You have found a creepy doll, that might be useful later on.");
+      }
+      else if (choice == 2){
+        System.out.println("You have found a chest full of clues.");
+      }
+      else if (choice == 1){
+        System.out.println("You ran into a wall. Please try again!");
+      }
     
     System.out.println("");
-    System.out.println("Well, let's begin by trying to figure out a way to exit this room.");
     
-    // Let the game begin!
     System.out.println("There are 5 doors in this room, choose the right one to process!");
     
-    // Generate number between 1 to 5
+    
     int randomNum = (int)((Math.random() * 5) + 1);
     System.out.println((int)((Math.random() * 5) + 1));
     
@@ -156,7 +118,6 @@ public class GameDriver{
       System.out.println("Game Over.");
     }
     
-    // Game Over
     tool.readFile("GameOver.txt");
   }
 }

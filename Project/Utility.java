@@ -11,6 +11,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Utility{
   
   /*
@@ -30,8 +34,24 @@ public class Utility{
     } catch (IOException e){
       e.printStackTrace();
     }
-    
   }
+    
   
-} // end class
+  public void writeFile(String FILENAME, String CONTENT){
+    
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILENAME))){
+      
+      String content = CONTENT;
+        
+        bw.write(content);
+        
+        System.out.println(content);
+      }catch (IOException e){
+      
+        e.printStackTrace();
+      }
+  
+  } // end class
+} // end method
+
 
