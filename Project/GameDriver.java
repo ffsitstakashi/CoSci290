@@ -54,26 +54,25 @@ public class GameDriver{
     System.out.println("");
     tool.readFile("Story3.txt");
     
-    // First Decision
-    // Declaring variables and prompting user to choose an option
-    System.out.println("1. Yes, crash the box! \n"
-                       + "2. No, try searching the shelf");
-    int puzzle;
-    puzzle = input.nextInt();
-    int puzzlee = puzzle;
-    String puzzle1;
-    switch(puzzlee){
-      case 1: puzzle1 = "Yes, crash the box! You found the lost door handle";
-        break;
-      default: puzzle1 = "No, try searching the shelf! You only found some dust, it must be in the box";
-        break;
+    // Room 1
+    int num;
+    boolean valid;
+    do{
+      System.out.println("1. Yes, crash the box! \n"
+                        + "2. No, try searching the shelf");
+      num = input.nextInt();
+      valid = num > 0 && num < 2;
+      if (!valid){
+        System.out.println("You only found some dust, it must be in the box.");
+        System.out.println("Do you want to brake the box?");
       }
-    System.out.print(puzzle1);
-    System.out.println("");
-    System.out.println("");
-      
+    }while (!valid);  
+    
+    
+    // Testing if this works or not
     String CONTENT = "testWriting";
     tool.writeFile("testWriting.txt", CONTENT);
+    
     
     
     tool.readFile("Story4.txt");
