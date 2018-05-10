@@ -23,7 +23,7 @@ public class TestArrays{
     names[4] = "Lynn";
     
     for (int i = 0; i < names.length; i++){
-      System.out.println("Element " + i + ": " + names[i]);
+      System.out.println("Element " + i + ": " + names[1]);
     }
     
   } // end of main 
