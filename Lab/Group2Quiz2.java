@@ -19,6 +19,7 @@ public class Group2Quiz2{
 
   public static void main(String[] args){
     
+    
     // Declaring an array
     String[] names = new String[6];
     // Assign values to array
