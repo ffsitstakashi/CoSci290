@@ -70,10 +70,9 @@ public class GameDriver{
     
     
     // Testing if this works or not
-    String CONTENT = "testWriting";
+    System.out.println(" ");
+    String CONTENT = "(Speaker Talks)";
     tool.writeFile("testWriting.txt", CONTENT);
-    
-    
     
     tool.readFile("Story4.txt");
     System.out.println("");
