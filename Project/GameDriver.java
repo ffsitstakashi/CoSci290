@@ -68,29 +68,67 @@ public class GameDriver{
       }
     }while (!valid);  
     
-    
     // Testing if this works or not
     System.out.println(" ");
-    String CONTENT = "(Speaker Talks)";
+    String CONTENT = "Speaker Talks";
     tool.writeFile("testWriting.txt", CONTENT);
     
     tool.readFile("Story4.txt");
     System.out.println("");
     
+    // Room 2
+    int choice;
+    boolean valid2;
+    do{
+      System.out.println("1. Begin crafting a key for the door. \n"
+                         + "2. Try opening the door without a key."); 
+      choice = input.nextInt();
+      valid2 = choice > 0 && choice < 2;
+      if (!valid2){
+        System.out.println("The door is locked. Go craft a key.");
+        System.out.println("Do you want to craft a key?.");
+      } 
+    }while (!valid2);
+    
+    System.out.println(" ");
+    CONTENT = "Speaker Talks";
+    tool.writeFile("testWriting.txt", CONTENT);
+    tool.readFile("Story5.txt");
+    
+    // Room 3
+    int number;
+    String numNum;
+    System.out.println("1. Enter the room without a key. \n" 
+                       + "2. Look through the box for a key.");
+    number = input.nextInt();
+    switch (number){
+      case 1: numNum = "Enter the room without a key.";
+        break;
+      default: numNum = "Look through the box for a key.";
+        break;
+    }
+    
+    CONTENT = "Speaker Talks";
+    tool.writeFile("testWriting.txt", CONTENT);
+    tool.readFile("Story6.txt");
+    
     System.out.println("Now choose 1 of theses 4 doors!");
-      int choice = input.nextInt();
-      if(choice == 4){
+    int choicee = input.nextInt();
+      if(choicee == 4){
         System.out.println("You have choosen the right door. Please move ahead.");
       }
-      else if (choice == 3){
-        System.out.println("You have found a creepy doll, that might be useful later on.");
+      else if (choicee == 3){
+        System.out.println("You have found a stone statue and a key, that might be useful later on.");
       }
-      else if (choice == 2){
-        System.out.println("You have found a chest full of clues.");
+      else if (choicee == 2){
+        System.out.println("You have found a chest full of nothingness.");
       }
-      else if (choice == 1){
+      else if (choicee == 1){
         System.out.println("You ran into a wall. Please try again!");
       }
+      
+    System.out.println("")
+    
     
     System.out.println("");
     
@@ -117,5 +155,7 @@ public class GameDriver{
     }
     
     tool.readFile("GameOver.txt");
+    
+    
   }
 }
