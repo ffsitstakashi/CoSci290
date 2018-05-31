@@ -94,8 +94,42 @@ public class GameDriver{
     CONTENT = "Speaker Talks";
     tool.writeFile("testWriting.txt", CONTENT);
     tool.readFile("Story5.txt");
+    System.out.println("");
     
     // Room 3
+    int num1;
+    boolean valid3;
+    do{
+      System.out.println("1. Look through the box for a key.  \n"
+                         + "2. Enter the room without a key."); 
+      num1 = input.nextInt();
+      valid3 = num1 > 0 && num1 < 2;
+      if (!valid3){
+        System.out.println("It's locked find a key first.");
+        System.out.println("Continue searching for a key.");
+      } 
+    }while (!valid3);
+    
+    System.out.println("");
+    CONTENT = "Speaker Talks";
+    tool.writeFile("testWriting.txt", CONTENT);
+    tool.readFile("Story6.txt");
+    
+    // Room 4
+    System.out.println("Now choose 1 of theses 3 doors!");
+    int num2;
+    boolean valid4;
+    do{
+      System.out.println("1. You have choosen the right door, but you need to find the statue and key first. \n"
+                         + "2. You have found a stone statue and a key, the statue might be useful later on.");
+      num2 = input.nextInt();
+      valid4 = num2 > 0 && num2 < 2;
+      if (!valid4){
+        System.out.println("Please try again");
+      }
+    }while (!valid4);
+    
+    
     int number;
     String numNum;
     System.out.println("1. Enter the room without a key. \n" 
@@ -108,27 +142,31 @@ public class GameDriver{
         break;
     }
     
-    CONTENT = "Speaker Talks";
-    tool.writeFile("testWriting.txt", CONTENT);
-    tool.readFile("Story6.txt");
-    
-    System.out.println("Now choose 1 of theses 4 doors!");
+    /*
     int choicee = input.nextInt();
-      if(choicee == 4){
-        System.out.println("You have choosen the right door. Please move ahead.");
-      }
-      else if (choicee == 3){
-        System.out.println("You have found a stone statue and a key, that might be useful later on.");
+      if(choicee == 3){
+        System.out.println("You have choosen the right door, but you need to find the statue first.");
       }
       else if (choicee == 2){
-        System.out.println("You have found a chest full of nothingness.");
+        System.out.println("You have found a stone statue and a key, that might be useful later on.");
+        System.out.println("Go through the door to continue!");
       }
       else if (choicee == 1){
         System.out.println("You ran into a wall. Please try again!");
       }
-      
-    System.out.println("")
+    // This part only if you enter 1 and have to try again
+    choicee = input.nextInt();
+      if(choicee == 4){
+        System.out.println("You have choosen the right door, but you need to find the statue first.");
+      }
+      else if (choicee == 3){
+        System.out.println("You have found a stone statue and a key, that might be useful later on.");
+      }
+      else if (choicee == 1){
+        System.out.println("You ran into a wall. Please try again!");
+      }
     
+    */
     
     System.out.println("");
     
